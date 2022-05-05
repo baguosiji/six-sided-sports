@@ -12,52 +12,54 @@
 
 <body>
     <div class="container">
-        <div class="swiper">
+        <!-- <div class="swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide"><img src="../img/banner1.png" alt="" /></div>
                 <div class="swiper-slide"><img src="../img/banner1.png" alt="" /></div>
                 <div class="swiper-slide"><img src="../img/banner1.png" alt="" /></div>
             </div>
             <div class="swiper-pagination"></div>
-            <!--分页器。如果放置在swiper外面，需要自定义样式。-->
         </div>
         <div class="type-title">经营范围</div>
         <div class="home-type-bg">
             <div class="hexagon">
-                <img src="../img/hexagon/hexagon1.png">
+                <img src="../img/hexagon/hexagon1.png" />
                 <div class="hexagon-other hexagon-other1">
                     <p class="title-second">Hexagonal Sports</p>
                     <p class="title-first">场地设施</p>
-                    <img src="../img/hexagon/hexagon2.png" alt="">
+                    <img src="../img/hexagon/hexagon2.png" alt="" />
                 </div>
                 <div class="hexagon-other hexagon-other2">
                     <p class="title-second">Fitness Equipment</p>
                     <p class="title-first">健身器材</p>
-                    <img src="../img/hexagon/hexagon2.png" alt="">
+                    <img src="../img/hexagon/hexagon2.png" alt="" />
                 </div>
                 <div class="hexagon-other hexagon-other3">
                     <p class="title-second">Smart Sports</p>
                     <p class="title-first">智慧体育</p>
-                    <img src="../img/hexagon/hexagon4.png" alt="">
+                    <img src="../img/hexagon/hexagon4.png" alt="" />
                 </div>
                 <div class="hexagon-other hexagon-other4">
                     <p class="title-second">Event service</p>
                     <p class="title-first">赛事服务</p>
-                    <img src="../img/hexagon/hexagon5.png" alt="">
+                    <img src="../img/hexagon/hexagon5.png" alt="" />
                 </div>
                 <div class="hexagon-other hexagon-other5">
                     <p class="title-second">Clothing group purchase</p>
                     <p class="title-first">服装团购</p>
-                    <img src="../img/hexagon/hexagon6.png" alt="">
+                    <img src="../img/hexagon/hexagon6.png" alt="" />
                 </div>
                 <div class="hexagon-other hexagon-other6">
                     <p class="title-second">Sports equipment</p>
                     <p class="title-first">运动装备</p>
-                    <img src="../img/hexagon/hexagon7.png" alt="">
+                    <img src="../img/hexagon/hexagon7.png" alt="" />
                 </div>
             </div>
         </div>
-        <div class="type-title">实体店面</div>
+        <div class="type-title">实体店面</div> -->
+        <div class="shop-list">
+            <div class="shop-list-scroll"></div>
+        </div>
     </div>
     <script src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="../js/pxToRem.js"></script>
@@ -69,6 +71,62 @@
                     el: '.swiper-pagination',
                 },
             });
+            //店铺模块
+            function shopModule() {
+                const shopList = [{
+                    name: '王海栋',
+                    icon: '../img/hexagon/hexagon1.png',
+                    hoverBg: '../img/banner1.png',
+                }, {
+                    name: '栋测试',
+                    icon: '../img/hexagon/hexagon1.png',
+                    hoverBg: '../img/banner1.png',
+                }, {
+                    name: '栋测试',
+                    icon: '../img/hexagon/hexagon1.png',
+                    hoverBg: '../img/banner1.png',
+                }, {
+                    name: '栋测试',
+                    icon: '../img/hexagon/hexagon1.png',
+                    hoverBg: '../img/banner1.png',
+                }, {
+                    name: '栋测试',
+                    icon: '../img/hexagon/hexagon1.png',
+                    hoverBg: '../img/banner1.png',
+                }, ];
+                $.each(shopList, function(idx, item) {
+                    const shopItem = $(`
+                <div class="shop-item">
+                    <div class="shop-top">
+                        <img src='${item.icon}' alt=""/>
+                        <p>${item.name}</p>
+                    </div>
+                    <div class="shop-bottom"></div>
+                </div>`);
+                    const shopOperation = shopItem.find('.shop-top');
+                    shopOperation.css('background', `#40aab8`);
+                    shopOperation.css('background-size', 'cover');
+                    shopOperation.on('click', function() {
+                        $('.shop-top').each(function() {
+                            $(this).css('border', 'none').css('background', `#40aab8`);
+                            const img = $(this).find('img');
+                            const p = $(this).find('p');
+                            img.show();
+                            p.show();
+                        });
+                        const img = $(this).find('img');
+                        const p = $(this).find('p');
+                        img.hide();
+                        p.hide();
+                        $(this)
+                            .css('border', '3px solid #40aab8')
+                            .css('background', `url(${item.hoverBg}) no-repeat`)
+                            .css('background-size', 'cover');
+                    });
+                    $('.shop-list-scroll').append(shopItem);
+                });
+            }
+            shopModule();
         });
     </script>
 </body>
