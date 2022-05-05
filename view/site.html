@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>场地设施</title>
+    <link rel="stylesheet" href="../css/site.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/swiper.min.css" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="../img/banner1.png" alt="" /></div>
+                <div class="swiper-slide"><img src="../img/banner1.png" alt="" /></div>
+                <div class="swiper-slide"><img src="../img/banner1.png" alt="" /></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="tab-container">
+            <div class="tab-header">
+                <div class=""></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/pxToRem.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    <script>
+        $(function() {
+            const mySwiper = new Swiper('.swiper', {
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+            });
+        });
+
+        function tabHeaderModule() {
+            const defaultActive = 0;
+            const headerList = [{
+                name: '场馆建设',
+                icon: '../img/introduction/int1.png',
+                activeIcon: '../img/introduction/int2.png',
+            }, {
+                name: '场馆建设',
+                icon: '../img/introduction/int1.png',
+                activeIcon: '../img/introduction/int2.png',
+            }, {
+                name: '场馆建设',
+                icon: '../img/introduction/int1.png',
+                activeIcon: '../img/introduction/int2.png',
+            }, ];
+            $.each(headerList, function(idx, item) {
+                const headerItem = $(`
+                    <div class="header-item">
+                        <img src='${item.icon}'/>
+                        <div>${item.name}</div>     
+                    </div>
+                `);
+                if (idx === defaultActive) {
+                    headerItem.find('div').css('color', '#40AAB8');
+                    headerItem.css('background', '#ffffff');
+                    headerItem.find('img').attr('src', item.activeIcon);
+                }
+                headerItem.on('click', function() {
+                    $('.header-item').each(function(index) {
+                        $(this).find('div').css('color', '#666666');
+                        $(this).find('img').attr('src', headerList[index].icon);
+                        $(this).css('background', '#EFEFEF');
+                    });
+                    $(this).find('img').attr('src', item.activeIcon);
+                    $(this).find('div').css('color', '#40AAB8');
+                    $(this).css('background', '#ffffff');
+                });
+                $('.tab-header').append(headerItem);
+            });
+        }
+        tabHeaderModule();
+    </script>
+</body>
+
+</html>
