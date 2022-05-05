@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>赛事服务</title>
+    <link rel="icon" href="../logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/competitionList.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/swiper.min.css" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="common-title">赛事服务</div>
+        <img class="page-img" src="../img/shop/test-img.png" />
+        <div class="page-content">
+            六边体育希望能够精准的了解您的详细需求，为此六边的客服和市场部门将会与您电话联系或者见面，以保证能够让您的需求得到更深的理解。
+        </div>
+        <div class="page-bg">
+            <div class="hexagonal hexagonal1">
+                <div class="title">场地设施</div>
+                <div class="horizontal-line"></div>
+                <div class="text">整个赛事的全盘规划，从顶层策略到落地执行全案输出</div>
+            </div>
+            <div class="hexagonal hexagonal2">
+                <div class="title">现场执行</div>
+                <div class="horizontal-line"></div>
+                <div class="text">开赛现场的落地执行细节，如流程跟踪， 关键环节等</div>
+            </div>
+            <div class="hexagonal hexagonal3">
+                <div class="title">赛事传播</div>
+                <div class="horizontal-line"></div>
+                <div class="text">赛事的全程传播， 从前期预热到开赛现场再到后续报道</div>
+            </div>
+            <div class="hexagonal hexagonal4">
+                <div class="title">资源对接</div>
+                <div class="horizontal-line"></div>
+                <div class="text">为赛事配置相关资源，如场地、拍摄、 传播、渠道等。</div>
+            </div>
+        </div>
+        <div class="common-title">精彩回顾</div>
+        <div class="history-list">
+            <!-- <div class="history-item">
+                <div class="title">揭开真相，为何NBA球员瞎唱后要理科穿上外套，难道球馆太冷了吗？</div>
+                <div class="img-list">
+                    <img src="../img/shop/test-img.png" alt="" />
+                    <img src="../img/shop/test-img.png" alt="" />
+                    <img src="../img/shop/test-img.png" alt="" />
+                </div>
+                <div class="history-msg"><span>舒克尔播报员</span>·<span>30条评论</span>·<span>1个月前</span></div>
+            </div> -->
+        </div>
+    </div>
+    <script src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/pxToRem.js"></script>
+    <script>
+        $(function() {
+            function historyListModule() {
+                const historyList = [{
+                    title: '揭开真相，为何NBA球员瞎唱后要理科穿上外套，难道球馆太冷了吗？',
+                    imgList: [],
+                    user: '舒克尔播报员',
+                    commit: '30',
+                    releaseTime: '1个月前',
+                }, {
+                    title: '揭开真相，为何NBA球员瞎唱后要理科穿上外套，难道球馆太冷了吗？',
+                    imgList: [],
+                    user: '舒克尔播报员',
+                    commit: '30',
+                    releaseTime: '1个月前',
+                }, {
+                    title: '揭开真相，为何NBA球员瞎唱后要理科穿上外套，难道球馆太冷了吗？',
+                    imgList: [],
+                    user: '舒克尔播报员',
+                    commit: '30',
+                    releaseTime: '1个月前',
+                }, ];
+                $.each(historyList, function(idx, item) {
+                    const historyItem = $(`
+                    <div class="history-item">
+                        <div class="title">${item.title}</div>
+                        <div class="img-list">
+                            <img src="../img/shop/test-img.png" alt="" />
+                            <img src="../img/shop/test-img.png" alt="" />
+                            <img src="../img/shop/test-img.png" alt="" />
+                        </div>
+                        <div class="history-msg"><span>${item.user}</span> · <span>${item.commit}条评论</span> · <span>${item.releaseTime}</span></div>
+                    </div> 
+                    `);
+                    $('.history-list').append(historyItem);
+                });
+            }
+            historyListModule();
+        });
+    </script>
+</body>
+
+</html>

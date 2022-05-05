@@ -1,0 +1,124 @@
+.container {
+    width: 3.75rem;
+}
+
+.common-title {
+    height: 0.64rem;
+    font-size: 0.16rem;
+    font-weight: 600;
+    color: #40aab8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-img {
+    width: 100%;
+    height: 2.48rem;
+}
+
+.page-content {
+    padding: 0.15rem;
+    font-size: 0.14rem;
+    font-weight: 400;
+    line-height: 0.25rem;
+    color: #666666;
+}
+
+.page-bg {
+    background: url('../img/competition/bg.png') no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 4rem;
+    position: relative;
+}
+
+.hexagonal {
+    width: 1.68rem;
+    height: 1.44rem;
+    background: url('../img/competition/hexagonal.png') no-repeat;
+    background-size: cover;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hexagonal1 {
+    top: 0;
+    left: 0.35rem;
+}
+
+.hexagonal2 {
+    top: 1.52rem;
+    left: 0.35rem;
+}
+
+.hexagonal3 {
+    top: 0.76rem;
+    right: 0.35rem;
+}
+
+.hexagonal4 {
+    bottom: 0.24rem;
+    right: 0.35rem;
+}
+
+.hexagonal>.title {
+    font-size: 0.17rem;
+    font-weight: 600;
+    line-height: 0.24rem;
+    color: #000000;
+}
+
+.hexagonal>.horizontal-line {
+    width: 0.28rem;
+    height: 0.04rem;
+    background: rgba(64, 170, 184, 0.39);
+    margin-bottom: 0.16rem;
+    margin-top: 0.06rem;
+}
+
+.hexagonal>.text {
+    width: 1rem;
+    font-size: 0.12rem;
+    font-weight: 400;
+    line-height: 0.2rem;
+    color: #707070;
+    text-align: center;
+}
+
+.history-list {
+    padding: 0 0.15rem;
+}
+
+.history-item {
+    padding: 0.1rem 0;
+}
+
+.history-item>.title {
+    font-size: 0.16rem;
+    font-weight: 400;
+    line-height: 0.26rem;
+    color: #666666;
+}
+
+.history-item>.img-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0.05rem 0;
+}
+
+.history-item>.img-list>img {
+    width: 1.11rem;
+    height: 0.88rem;
+}
+
+.history-item>.history-msg {
+    font-size: 0.12rem;
+    font-weight: 400;
+    line-height: 0.26rem;
+    color: #999999;
+}
