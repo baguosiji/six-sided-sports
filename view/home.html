@@ -12,7 +12,7 @@
 
 <body>
     <div class="container">
-        <!-- <div class="swiper">
+        <div class="swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide"><img src="../img/banner1.png" alt="" /></div>
                 <div class="swiper-slide"><img src="../img/banner1.png" alt="" /></div>
@@ -56,9 +56,70 @@
                 </div>
             </div>
         </div>
-        <div class="type-title">实体店面</div> -->
+        <div class="type-title">实体店面</div>
         <div class="shop-list">
             <div class="shop-list-scroll"></div>
+        </div>
+        <div class="shop-detail">
+            <div class="shop-message">
+                <div class="locaion-conatiner">
+                    <img class="location-icon" src="../img/shop/loaction.png" alt="" />
+                    <span>去这里</span>
+                </div>
+                <div class="line"></div>
+                <div class="location-time">
+                    <div class="time-container">
+                        <span>六边体育</span>
+                        <div class="time-icon-text">
+                            <img class="time-icon" src="../img/shop/time.png" alt="" /> <span class="time">08:30-17:30</span>
+                        </div>
+                    </div>
+                    <p class="location">天津市北辰区红星美凯龙负一层</p>
+                </div>
+                <img class="phone-icon" src="../img/shop/phone.png" alt="" />
+            </div>
+            <img class="detail-img" src="../img/shop/test-img.png" alt="" />
+        </div>
+        <div class="type-title" style="background-color: #f1f1f1">案例展示</div>
+        <div class="case-list"></div>
+        <div class="brand-introduction">
+            <div class="type-title" style="color: #ffffff">自主品牌</div>
+            <div class="brand-admin">
+                <div class="introduction-container">
+                    <img class="introduction-logo" src="../img/introduction/admin_logo.png" alt="" />
+                    <div class="introduction-line"></div>
+                    <div class="introduction-msg">
+                        <p>六边体育-智慧体育管理平台</p>
+                        <div>包括智能健身、智能体侧、场地设施、巡检维修、体育组织、赛事活动综合型app</div>
+                    </div>
+                </div>
+                <div class="barnd-description">
+                    通过多年的经验累积，不断的创新，与客户对我们的认可，开发出北辰体育、南开体育、红桥体育等多个互联网管理平台app。
+                </div>
+                <div class="barnd-img-list">
+                    <img src="../img/introduction/int1.png" alt="" />
+                    <img style="margin: 0 0.5rem" src="../img/introduction/int2.png" alt="" />
+                    <img src="../img/introduction/int3.png" alt="" />
+                </div>
+            </div>
+            <div style="height: 0.15rem; width: 100%"></div>
+            <div class="brand-admin">
+                <div class="introduction-container">
+                    <img class="introduction-logo" src="../img/introduction/mini_program_logo.png" alt="" />
+                    <div class="introduction-line"></div>
+                    <div class="introduction-msg">
+                        <p>六边共享运动场-场地预定小程序</p>
+                        <div>解决场地预定问题，可实现无人值守，自动订场并 扫码进门，富有场地管理系统</div>
+                    </div>
+                </div>
+                <div class="barnd-description">
+                    通过共享运动场的开发，不断摸索系统管理经验，平台运营经验，开发出网球运动管理中心的预定系统
+                </div>
+                <div class="jump-btn"><img src="../img//introduction/btn_icon.png" alt="" /> 天津市网球运动管理中心</div>
+            </div>
+            <div class="cooperation-brand-container">
+                <div class="type-title" style="color: #ffffff">合作品牌</div>
+            </div>
         </div>
     </div>
     <script src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.1.1/jquery.min.js"></script>
@@ -74,24 +135,34 @@
             //店铺模块
             function shopModule() {
                 const shopList = [{
-                    name: '王海栋',
-                    icon: '../img/hexagon/hexagon1.png',
+                    shopName: '六边体育',
+                    icon: '../img/logo.png',
+                    shopType: '',
                     hoverBg: '../img/banner1.png',
                 }, {
-                    name: '栋测试',
-                    icon: '../img/hexagon/hexagon1.png',
+                    shopName: '舒华水滴',
+                    shopType: '旗舰店',
+                    icon: '../img/logo.png',
                     hoverBg: '../img/banner1.png',
                 }, {
-                    name: '栋测试',
-                    icon: '../img/hexagon/hexagon1.png',
+                    shopName: '舒华水滴',
+                    shopType: '旗舰店',
+                    icon: '../img/logo.png',
                     hoverBg: '../img/banner1.png',
                 }, {
-                    name: '栋测试',
-                    icon: '../img/hexagon/hexagon1.png',
+                    shopName: '西青舒华',
+                    shopType: '专卖店',
+                    icon: '../img/logo.png',
                     hoverBg: '../img/banner1.png',
                 }, {
-                    name: '栋测试',
-                    icon: '../img/hexagon/hexagon1.png',
+                    shopName: '武清舒华',
+                    shopType: '专卖店',
+                    icon: '../img/logo.png',
+                    hoverBg: '../img/banner1.png',
+                }, {
+                    shopName: '西青舒华',
+                    shopType: '专卖店',
+                    icon: '../img/logo.png',
                     hoverBg: '../img/banner1.png',
                 }, ];
                 $.each(shopList, function(idx, item) {
@@ -99,7 +170,8 @@
                 <div class="shop-item">
                     <div class="shop-top">
                         <img src='${item.icon}' alt=""/>
-                        <p>${item.name}</p>
+                        <p>${item.shopName}</p>
+                        <div>${item.shopType}</div>
                     </div>
                     <div class="shop-bottom"></div>
                 </div>`);
@@ -111,13 +183,17 @@
                             $(this).css('border', 'none').css('background', `#40aab8`);
                             const img = $(this).find('img');
                             const p = $(this).find('p');
+                            const div = $(this).find('div');
                             img.show();
                             p.show();
+                            div.show();
                         });
                         const img = $(this).find('img');
                         const p = $(this).find('p');
+                        const div = $(this).find('div');
                         img.hide();
                         p.hide();
+                        div.hide();
                         $(this)
                             .css('border', '3px solid #40aab8')
                             .css('background', `url(${item.hoverBg}) no-repeat`)
@@ -126,7 +202,36 @@
                     $('.shop-list-scroll').append(shopItem);
                 });
             }
+
+            function caseModule() {
+                const caseList = [{
+                    caseName: '健身器材',
+                }, {
+                    caseName: '场地设施',
+                }, {
+                    caseName: '运动装备',
+                }, {
+                    caseName: '服装团购',
+                }, {
+                    caseName: '智能体育',
+                }, {
+                    caseName: '赛事服务',
+                }, ];
+                $.each(caseList, function(idx, item) {
+                    const caseItem = $(`
+                        <div class='case-list-item'>
+                            <img src='../img/case/case${idx + 1}.png'/>
+                            <p>${item.caseName}</p>
+                        </div>
+                    `);
+                    if (idx % 2) {
+                        caseItem.css('background', '#f1f1f1');
+                    }
+                    $('.case-list').append(caseItem);
+                });
+            }
             shopModule();
+            caseModule();
         });
     </script>
 </body>

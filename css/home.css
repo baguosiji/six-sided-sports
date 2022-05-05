@@ -127,12 +127,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 10px;
+    margin: 0 0.06rem;
 }
 
 .shop-top {
-    width: 0.64rem;
-    height: 0.64rem;
+    width: 0.56rem;
+    height: 0.6rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -149,15 +149,239 @@
 
 .shop-top>p {
     color: #ffffff;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
-    margin-top: 0.05rem;
+    margin-top: 0.03rem;
+    line-height: 13px;
+}
+
+.shop-top>div {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 13px;
 }
 
 .shop-bottom {
     width: 0;
     height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 10px solid #40aab8;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #40aab8;
+}
+
+.shop-message {
+    display: flex;
+    align-items: center;
+    height: 0.6rem;
+    width: 3.75rem;
+    margin-bottom: 0.1rem;
+}
+
+.locaion-conatiner {
+    display: flex;
+    height: 0.6rem;
+    width: 0.6rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.locaion-conatiner>img {
+    width: 0.28rem;
+    height: 0.28rem;
+}
+
+.locaion-conatiner>span {
+    font-size: 0.12rem;
+    font-weight: 400;
+    line-height: 0.16rem;
+    color: #40aab8;
+    opacity: 0.7;
+    margin-top: 0.02rem;
+}
+
+.time-container {
+    display: flex;
+    align-items: center;
+}
+
+.time-container>span {
+    font-size: 0.15rem;
+    font-weight: 600;
+    line-height: 0.21rem;
+    color: #000000;
+}
+
+.time-container .time-icon {
+    width: 0.15rem;
+    height: 0.15rem;
+    margin: 0 0.03rem;
+}
+
+.time-container .time {
+    font-size: 0.12rem;
+    font-weight: 400;
+    line-height: 0.16rem;
+    color: #40aab8;
+}
+
+.time-icon-text {
+    display: flex;
+    align-items: center;
+    padding-bottom: 0.01rem;
+}
+
+.line {
+    height: 0.4rem;
+    width: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 0 0.1rem;
+}
+
+.location-time {
+    flex: 1;
+}
+
+.phone-icon {
+    width: 0.24rem;
+    height: 0.24rem;
+    margin-right: 0.2rem;
+}
+
+.detail-img {
+    height: 2.48rem;
+    width: 3.75rem;
+}
+
+
+/* 案例样式 */
+
+.case-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.case-list-item {
+    width: 1.25rem;
+    height: 1.44rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.case-list-item>img {
+    width: 0.64rem;
+    height: 0.64rem;
+}
+
+.case-list-item>p {
+    font-size: 0.16rem;
+    font-weight: 400;
+    line-height: 0.22rem;
+    color: #707070;
+    margin-top: 0.12rem;
+}
+
+
+/* 品牌介绍 */
+
+.brand-introduction {
+    width: 3.75rem;
+    height: 10rem;
+    background-color: #40aab8;
+}
+
+.brand-admin {
+    width: 3.6rem;
+    padding: 0.2rem 0.16rem;
+    margin: 0 auto;
+    background-color: #2b94a2;
+}
+
+.introduction-container {
+    height: 0.8rem;
+    display: flex;
+    align-items: center;
+}
+
+.barnd-description {
+    font-size: 0.12rem;
+    font-weight: 400;
+    line-height: 0.18rem;
+    color: #ffffff;
+    margin-top: 0.02rem;
+}
+
+.barnd-img-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.06rem;
+}
+
+.jump-btn {
+    width: 3.28rem;
+    height: 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.16rem;
+    font-weight: 600;
+    color: #000000;
+    margin-top: 0.1rem;
+    background: rgba(178, 217, 225, 0.39);
+}
+
+.jump-btn>img {
+    width: 0.22rem;
+    height: 0.22rem;
+    margin-right: 0.06rem;
+}
+
+.barnd-img-list>img {
+    width: 0.4rem;
+    height: 0.4rem;
+}
+
+.introduction-msg {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.introduction-msg>p {
+    font-size: 0.16rem;
+    font-weight: 600;
+    line-height: 0.22rem;
+    color: #ffffff;
+}
+
+.introduction-msg>div {
+    font-size: 0.12rem;
+    font-weight: 400;
+    line-height: 18px;
+    color: #ffffff;
+}
+
+.introduction-logo {
+    width: 0.56rem;
+    height: 0.56rem;
+}
+
+.introduction-line {
+    width: 0.02rem;
+    height: 0.64rem;
+    margin: 0 0.12rem;
+    background: rgba(187, 207, 210, 0.39);
+}
+
+.cooperation-brand-container {
+    background: url('../img/introduction/bg.png') no-repeat;
+    background-size: cover;
+    height: 100%;
+    height: 4.48rem;
 }
