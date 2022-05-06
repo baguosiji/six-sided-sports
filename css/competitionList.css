@@ -1,5 +1,7 @@
 .container {
     width: 3.75rem;
+    height: 100vh;
+    overflow: auto;
 }
 
 .common-title {

@@ -1,0 +1,133 @@
+.container {
+    width: 3.75rem;
+    height: calc(100vh - 0.5rem);
+    overflow: auto;
+}
+
+.case-banner {
+    width: 100%;
+    height: 2.48rem;
+}
+
+.img-list {
+    width: 3.45rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-top: 0.16rem;
+}
+
+.img-list-item {
+    width: 1.68rem;
+    margin-bottom: 0.16rem;
+}
+
+.img-list-item>img {
+    width: 100%;
+    height: 1.2rem;
+}
+
+.img-list-item>p {
+    font-size: 0.16rem;
+    font-weight: 400;
+    line-height: 0.26rem;
+    color: #000000;
+    text-align: center;
+    margin-top: 0.1rem;
+}
+
+
+/* 分页器 */
+
+
+/* 外面盒子样式---自己定义 */
+
+.page_div {
+    color: #666;
+    margin-bottom: 0.2rem;
+}
+
+
+/* 页数按钮样式 */
+
+.page_div button {
+    display: inline-block;
+    min-width: 0.3rem;
+    height: 0.28rem;
+    cursor: pointer;
+    color: #666;
+    font-size: 0.13rem;
+    line-height: 0.28rem;
+    background-color: #f9f9f9;
+    border: 1px solid #dce0e0;
+    text-align: center;
+    margin: 0 0.04rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+#firstPage,
+#lastPage,
+#nextPage,
+#prePage {
+    width: 0.5rem;
+    color: #0073a9;
+    border: 1px solid #0073a9;
+}
+
+#nextPage,
+#prePage {
+    width: 0.7rem;
+}
+
+.page_div .current {
+    background-color: #0073a9;
+    border-color: #0073a9;
+    color: #fff;
+}
+
+
+/* 页面数量 */
+
+.totalPages {
+    margin: 0 0.1rem;
+}
+
+.totalPages span,
+.totalSize span {
+    color: #0073a9;
+    margin: 0 0.05rem;
+}
+
+
+/*button禁用*/
+
+.page_div button:disabled {
+    opacity: 0.5;
+    cursor: no-drop;
+}
+
+.company-msg {
+    width: 3.75rem;
+    height: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: #4d4d4c;
+    font-size: 0.14rem;
+    font-weight: 400;
+    line-height: 0.2rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.msg-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.msg-bottom {
+    text-align: center;
+}

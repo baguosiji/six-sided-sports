@@ -12,6 +12,8 @@
 </head>
 
 <body>
+    <script src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/pxToRem.js"></script>
     <div class="container">
         <div class="swiper">
             <div class="swiper-wrapper">
@@ -27,8 +29,6 @@
             </div>
         </div>
     </div>
-    <script src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="../js/pxToRem.js"></script>
     <script src="../js/swiper.min.js"></script>
     <script>
         $(function() {
@@ -56,25 +56,25 @@
             }, ];
             $.each(headerList, function(idx, item) {
                 const headerItem = $(`
-                    <div class="header-item">
+                    <div class="header-item" style='width:${100 / headerList.length}vw'>
                         <img src='${item.icon}'/>
                         <div>${item.name}</div>     
                     </div>
                 `);
                 if (idx === defaultActive) {
                     headerItem.find('div').css('color', '#40AAB8');
-                    headerItem.css('background', '#ffffff');
+                    headerItem.css('background', '#ffffff').css('border-top', '2px solid #40AAB8');
                     headerItem.find('img').attr('src', item.activeIcon);
                 }
                 headerItem.on('click', function() {
                     $('.header-item').each(function(index) {
                         $(this).find('div').css('color', '#666666');
                         $(this).find('img').attr('src', headerList[index].icon);
-                        $(this).css('background', '#EFEFEF');
+                        $(this).css('background', '#EFEFEF').css('border', 'none');
                     });
                     $(this).find('img').attr('src', item.activeIcon);
                     $(this).find('div').css('color', '#40AAB8');
-                    $(this).css('background', '#ffffff');
+                    headerItem.css('background', '#ffffff').css('border-top', '2px solid #40AAB8');
                 });
                 $('.tab-header').append(headerItem);
             });

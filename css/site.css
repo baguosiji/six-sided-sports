@@ -1,5 +1,6 @@
 .container {
     width: 3.75rem;
+    overflow: auto;
 }
 
 .swiper {

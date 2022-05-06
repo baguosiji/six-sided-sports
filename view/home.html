@@ -12,6 +12,8 @@
 </head>
 
 <body>
+    <script src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/pxToRem.js"></script>
     <div class="container">
         <div class="swiper">
             <div class="swiper-wrapper">
@@ -123,8 +125,15 @@
             </div>
         </div>
     </div>
-    <script src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="../js/pxToRem.js"></script>
+    <div class="navigation-bar">
+        <div class="navigation-bar-item" hoverValue="0">
+            <img icon="home" src="../img/navigator/home.png" alt="" /> 首页
+        </div>
+        <div class="navigation-bar-item"><img icon="case" src="../img/navigator/case.png" alt="" /> 案例</div>
+        <div class="navigation-bar-item"><img icon="equipment" src="../img/navigator/equipment.png" alt="" /> 装备</div>
+        <div class="navigation-bar-item"><img icon="my" src="../img/navigator/my.png" alt="" /> 我的</div>
+    </div>
+    <script src="../js/navigation.js"></script>
     <script src="../js/swiper.min.js"></script>
     <script>
         $(function() {
@@ -132,6 +141,16 @@
                 pagination: {
                     el: '.swiper-pagination',
                 },
+            });
+            $('.hexagon-other').on('click', function() {
+                const classStr = $(this).attr('class');
+                const btnValue = classStr.substr(classStr.length - 1, 1);
+                if (btnValue === '1') {
+                    window.location.href = './site.html';
+                }
+                if (btnValue === '4') {
+                    window.location.href = './competitionList.html';
+                }
             });
             //店铺模块
             function shopModule() {

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>案例</title>
+    <link rel="icon" href="../logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/case.css" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+
+<body>
+    <script src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/pxToRem.js"></script>
+    <div class="container">
+        <img class="case-banner" src="../img/case_banner.png" alt="" />
+        <div class="img-list"></div>
+        <div id="page" class="page_div"></div>
+        <div class="company-msg">
+            <div class="msg-top">
+                <div>总部电话：023-63830765</div>
+                <div>集团采购：137-0837-8741</div>
+            </div>
+            <div class="msg-bottom">公司地址：重庆市渝中区临江路30号</div>
+        </div>
+    </div>
+    <div class="navigation-bar">
+        <div class="navigation-bar-item"><img icon="home" src="../img/navigator/home.png" alt="" /> 首页</div>
+        <div class="navigation-bar-item" hoverValue="1">
+            <img icon="case" src="../img/navigator/case.png" alt="" /> 案例
+        </div>
+        <div class="navigation-bar-item"><img icon="equipment" src="../img/navigator/equipment.png" alt="" /> 装备</div>
+        <div class="navigation-bar-item"><img icon="my" src="../img/navigator/my.png" alt="" /> 我的</div>
+    </div>
+    <script src="../js/page.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script>
+        $(function() {
+            //分页
+            $('#page').paging({
+                pageNum: 5, // 当前页面
+                totalNum: 14, // 总页码
+                totalList: 300, // 记录总数量
+                callback: function(num) {
+                    //回调函数
+                    console.log(num);
+                },
+            });
+
+            function imgListModule() {
+                const imgList = [{
+                    name: '重庆市医疗保障局',
+                    imgUrl: '../img/shop/test-img.png',
+                }, {
+                    name: '重庆市医疗保障局',
+                    imgUrl: '../img/shop/test-img.png',
+                }, {
+                    name: '重庆市医疗保障局',
+                    imgUrl: '../img/shop/test-img.png',
+                }, {
+                    name: '重庆市医疗保障局',
+                    imgUrl: '../img/shop/test-img.png',
+                }, {
+                    name: '重庆市医疗保障局',
+                    imgUrl: '../img/shop/test-img.png',
+                }, {
+                    name: '重庆市医疗保障局',
+                    imgUrl: '../img/shop/test-img.png',
+                }, {
+                    name: '重庆市医疗保障局',
+                    imgUrl: '../img/shop/test-img.png',
+                }, ];
+                $.each(imgList, function(idx, item) {
+                    const imgListItem = $(`
+                        <div class="img-list-item">
+                            <img src="${item.imgUrl}" alt="" />
+                            <p>${item.name}</p>
+                        </div>
+                    `);
+                    imgListItem.on('click', function() {
+                        // do somting
+                    });
+                    $('.img-list').append(imgListItem);
+                });
+            }
+            imgListModule();
+        });
+    </script>
+</body>
+
+</html>
