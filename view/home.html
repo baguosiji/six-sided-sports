@@ -269,52 +269,55 @@
             function brandModule() {
                 const brandList = [{
                     name: '',
-                    icon: '../img/brand/bran1.png',
+
                 }, {
                     name: '',
-                    icon: '../img/brand/bran1.png',
+
                 }, {
                     name: '',
-                    icon: '../img/brand/bran1.png',
+
                 }, {
                     name: '',
-                    icon: '../img/brand/bran1.png',
+
                 }, {
                     name: '',
-                    icon: '../img/brand/bran1.png',
+
                 }, {
                     name: '',
-                    icon: '../img/brand/bran1.png',
+
                 }, {
                     name: '',
-                    icon: '../img/brand/bran1.png',
+
                 }, {
                     name: '',
-                    icon: '../img/brand/bran1.png',
+
                 }, {
                     name: '',
-                    icon: '../img/brand/bran1.png',
+
                 }, {
                     name: '',
-                    icon: '../img/brand/bran1.png',
+
                 }, {
                     name: '',
-                    icon: '../img/brand/bran1.png',
+
                 }, {
                     name: '',
-                    icon: '../img/brand/bran1.png',
+
                 }, {
                     name: '',
-                    icon: '../img/brand/bran1.png',
+
                 }, {
                     name: '',
-                    icon: '../img/brand/bran1.png',
-                }, ];
+
+                }, {
+                    name: '',
+
+                }];
                 $.each(brandList, function(idx, item) {
                     const brand = $(`
                     <div class="cooperation-brand-item-container ${idx < 3 ? 'cooperation-brand-item-container-big' : ''}">
                         <div class="cooperation-brand-item ${idx < 3 ? 'cooperation-brand-item-big' : ''}">
-                            <img src="${item.icon}" alt="" />
+                            <img src="../img/brand/ban${idx+1}.png" style="height:${idx===1?'0.15rem':'0.22rem'}" alt="" />
                         </div>
                     </div>
                     `);
