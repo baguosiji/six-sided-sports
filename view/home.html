@@ -15,6 +15,11 @@
     <script src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="../js/pxToRem.js"></script>
     <div class="container">
+        <div class="logo-container">
+            <img src="../img/login_active.png" alt="" />
+            <p>六边体育</p>
+            <div>打造群众身边的六边体育工程</div>
+        </div>
         <div class="swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide"><img src="../img/banner1.png" alt="" /></div>
@@ -122,17 +127,27 @@
             </div>
             <div class="cooperation-brand-container">
                 <div class="type-title" style="color: #ffffff">合作品牌</div>
+                <div class="cooperation-brand-list">
+                </div>
             </div>
         </div>
+    </div>
     </div>
     <div class="navigation-bar">
         <div class="navigation-bar-item" hoverValue="0">
             <img icon="home" src="../img/navigator/home.png" alt="" /> 首页
         </div>
-        <div class="navigation-bar-item"><img icon="case" src="../img/navigator/case.png" alt="" /> 案例</div>
-        <div class="navigation-bar-item"><img icon="equipment" src="../img/navigator/equipment.png" alt="" /> 装备</div>
-        <div class="navigation-bar-item"><img icon="my" src="../img/navigator/my.png" alt="" /> 我的</div>
+        <div id="launch-btn" username="原始ID" path="views/index/service-center/service-center" class="navigation-bar-item">
+            <img icon="case" src="../img/navigator/case.png" alt="" /> 案例
+        </div>
+        <wx-open-launch-weapp class="navigation-bar-item" username="gh_193fcff8fe19">
+            <img icon="equipment" src="../img/navigator/equipment.png" alt="" /> 装备
+        </wx-open-launch-weapp>
+        <wx-open-launch-weapp class="navigation-bar-item" username="gh_8f024646259b">
+            <img icon="my" src="../img/navigator/my.png" alt="" /> 我的
+        </wx-open-launch-weapp>
     </div>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
     <script src="../js/navigation.js"></script>
     <script src="../js/swiper.min.js"></script>
     <script>
@@ -187,14 +202,14 @@
                 }, ];
                 $.each(shopList, function(idx, item) {
                     const shopItem = $(`
-                <div class="shop-item">
-                    <div class="shop-top">
-                        <img src='${item.icon}' alt=""/>
-                        <p>${item.shopName}</p>
-                        <div>${item.shopType}</div>
-                    </div>
-                    <div class="shop-bottom"></div>
-                </div>`);
+                        <div class="shop-item">
+                            <div class="shop-top">
+                                <img src='${item.icon}' alt=""/>
+                                <p>${item.shopName}</p>
+                                <div>${item.shopType}</div>
+                            </div>
+                            <div class="shop-bottom"></div>
+                        </div>`);
                     const shopOperation = shopItem.find('.shop-top');
                     shopOperation.css('background', `#40aab8`);
                     shopOperation.css('background-size', 'cover');
@@ -250,8 +265,65 @@
                     $('.case-list').append(caseItem);
                 });
             }
+            //合作品牌
+            function brandModule() {
+                const brandList = [{
+                    name: '',
+                    icon: '../img/brand/bran1.png',
+                }, {
+                    name: '',
+                    icon: '../img/brand/bran1.png',
+                }, {
+                    name: '',
+                    icon: '../img/brand/bran1.png',
+                }, {
+                    name: '',
+                    icon: '../img/brand/bran1.png',
+                }, {
+                    name: '',
+                    icon: '../img/brand/bran1.png',
+                }, {
+                    name: '',
+                    icon: '../img/brand/bran1.png',
+                }, {
+                    name: '',
+                    icon: '../img/brand/bran1.png',
+                }, {
+                    name: '',
+                    icon: '../img/brand/bran1.png',
+                }, {
+                    name: '',
+                    icon: '../img/brand/bran1.png',
+                }, {
+                    name: '',
+                    icon: '../img/brand/bran1.png',
+                }, {
+                    name: '',
+                    icon: '../img/brand/bran1.png',
+                }, {
+                    name: '',
+                    icon: '../img/brand/bran1.png',
+                }, {
+                    name: '',
+                    icon: '../img/brand/bran1.png',
+                }, {
+                    name: '',
+                    icon: '../img/brand/bran1.png',
+                }, ];
+                $.each(brandList, function(idx, item) {
+                    const brand = $(`
+                    <div class="cooperation-brand-item-container ${idx < 3 ? 'cooperation-brand-item-container-big' : ''}">
+                        <div class="cooperation-brand-item ${idx < 3 ? 'cooperation-brand-item-big' : ''}">
+                            <img src="${item.icon}" alt="" />
+                        </div>
+                    </div>
+                    `);
+                    $('.cooperation-brand-list').append(brand);
+                });
+            }
             shopModule();
             caseModule();
+            brandModule();
         });
     </script>
 </body>

@@ -4,6 +4,33 @@
     overflow: auto;
 }
 
+.logo-container {
+    display: flex;
+    align-items: center;
+    height: 0.5rem;
+    padding: 0 0.1rem;
+}
+
+.logo-container>img {
+    width: 0.24rem;
+    height: 0.22rem;
+}
+
+.logo-container>p {
+    font-size: 0.18rem;
+    font-weight: 600;
+    line-height: 0.25rem;
+    color: #40aab8;
+    margin: 0 0.08rem 0 0.02rem;
+}
+
+.logo-container>div {
+    font-size: 0.12rem;
+    font-weight: 400;
+    line-height: 0.17rem;
+    color: #40aab8;
+}
+
 .swiper {
     height: 1.76rem;
 }
@@ -63,7 +90,7 @@
 }
 
 .hexagon-other>.title-second {
-    font-size: 14px;
+    font-size: 0.14rem;
     -webkit-transform: scale(0.5);
     font-weight: 400;
     color: #ffffff;
@@ -72,7 +99,7 @@
 }
 
 .hexagon-other>.title-first {
-    font-size: 14px;
+    font-size: 0.14rem;
     font-weight: 400;
     color: #ffffff;
     margin-bottom: 0.05rem;
@@ -145,31 +172,31 @@
 }
 
 .shop-top>img {
-    height: 20px;
-    width: 20px;
+    height: 0.2rem;
+    width: 0.2rem;
 }
 
 .shop-top>p {
     color: #ffffff;
-    font-size: 12px;
+    font-size: 0.12rem;
     font-weight: 400;
     margin-top: 0.03rem;
-    line-height: 13px;
+    line-height: 0.13rem;
 }
 
 .shop-top>div {
     color: #ffffff;
-    font-size: 12px;
+    font-size: 0.12rem;
     font-weight: 400;
-    line-height: 13px;
+    line-height: 0.13rem;
 }
 
 .shop-bottom {
     width: 0;
     height: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-top: 8px solid #40aab8;
+    border-left: 0.08rem solid transparent;
+    border-right: 0.08rem solid transparent;
+    border-top: 0.08rem solid #40aab8;
 }
 
 .shop-message {
@@ -365,7 +392,7 @@
 .introduction-msg>div {
     font-size: 0.12rem;
     font-weight: 400;
-    line-height: 18px;
+    line-height: 0.18rem;
     color: #ffffff;
 }
 
@@ -386,4 +413,45 @@
     background-size: cover;
     height: 100%;
     height: 4.48rem;
+}
+
+.cooperation-brand-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cooperation-brand-item {
+    background: url('../img/brand/hexagonal.png') no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 0.7rem;
+    height: 0.6rem;
+}
+
+.cooperation-brand-item>img {
+    width: 0.44rem;
+    height: 0.44rem;
+}
+
+.cooperation-brand-item-big {
+    width: 1.04rem;
+    height: 0.88rem;
+}
+
+.cooperation-brand-item-big>img {
+    width: 0.71rem;
+    height: 0.71rem;
+}
+
+.cooperation-brand-item-container {
+    width: 0.9375rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.24rem;
+}
+
+.cooperation-brand-item-container-big {
+    width: 1.25rem;
 }

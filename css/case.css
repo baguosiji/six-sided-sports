@@ -45,6 +45,11 @@
 
 .page_div {
     color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 0.2rem;
     margin-bottom: 0.2rem;
 }
 
@@ -59,13 +64,14 @@
     color: #666;
     font-size: 0.13rem;
     line-height: 0.28rem;
-    background-color: #f9f9f9;
-    border: 1px solid #dce0e0;
+    background-color: #ffffff;
+    border: 1px solid #999999;
     text-align: center;
     margin: 0 0.04rem;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    border-radius: 3px;
 }
 
 #firstPage,
@@ -73,8 +79,12 @@
 #nextPage,
 #prePage {
     width: 0.5rem;
-    color: #0073a9;
-    border: 1px solid #0073a9;
+    color: #666;
+    border: 1px solid #999999;
+}
+
+#lastPage {
+    margin-top: 0.08rem;
 }
 
 #nextPage,
@@ -83,8 +93,8 @@
 }
 
 .page_div .current {
-    background-color: #0073a9;
-    border-color: #0073a9;
+    background-color: #40aab8;
+    border-color: #40aab8;
     color: #fff;
 }
 
